@@ -1,13 +1,10 @@
-import { StarOutlined } from "@ant-design/icons"
-import { Space } from "antd"
-
 const MovieRating = () => {
   return (
-    <Space size="small" align="center">
+    <div>
       {Array.from(new Array(5)).map((_, i) => (
-        <StarOutlined key={i}/>
+        <i key={i}/>
       ))}
-    </Space>
+    </div>
   )
 }
 

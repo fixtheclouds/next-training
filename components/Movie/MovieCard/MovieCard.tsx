@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import MovieRating from "../MovieRating"
+import { IoMdEye, IoMdHeart } from "react-icons/io"
 
 import styles from "./MovieCard.module.sass"
 
@@ -18,14 +18,14 @@ const MovieCard = ({ title, year, imageUrl }: IMovieCardProps) => {
         <div className={styles.overlay}/>
         <Image alt="cover" width="200" height="300" layout="responsive" src={imageUrl} objectFit="cover" />
       </a>
-      <div>
-        <span className={styles.views}></span>
-        <span className={styles.likes}></span>
+      <div className={styles.stats}>
+        <div className={styles.views}><IoMdEye color={styles.eyeColor}/>450</div>
+        <div className={styles.likes}><IoMdHeart color={styles.heartColor}/>1,653</div>
       </div>
       <div className={styles.title}>
         <a href="#">{title}</a>
       </div>
-      <small className={styles.year}>{year}</small>
+      <div className={styles.year}>{year}</div>
     </div>
   )
 }

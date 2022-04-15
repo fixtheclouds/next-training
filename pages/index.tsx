@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
-import { Grid, Unit } from '../components/Grid';
-import { Container, Navbar } from '../components/Layout';
+import { Grid, Unit } from '../components/Grid'
+import { Container, Logo, Navbar } from '../components/Layout'
+import { IoMdAperture } from 'react-icons/io'
 
-import MovieCard from '../components/Movie/MovieCard/MovieCard';
-import SectionHeading from '../components/SectionHeading/SectionHeading';
+import MovieCard from '../components/Movie/MovieCard/MovieCard'
+import SectionHeading from '../components/SectionHeading/SectionHeading'
 
 // TODO: move data to somewhere else
 const movies = [
@@ -35,7 +36,7 @@ const Home: NextPage = () => {
     <div>
       <main>
         <Navbar>
-          <h1>MovieBox</h1>
+          <Logo>MovieBox</Logo>
         </Navbar>
         <Container>
           <SectionHeading>Trending movies</SectionHeading>

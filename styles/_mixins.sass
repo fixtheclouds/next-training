@@ -1,0 +1,18 @@
+$sm: 576px
+$md: 768px
+$lg: 992px
+$xl: 1200px
+
+@mixin media-up($size)
+  @if $size == sm
+    @media (max-width: $sm)
+      @content
+  @else if $size == md
+    @media (min-width: $md)
+      @content
+  @else if $size == lg
+    @media (min-width: $lg)
+      @content
+  @else if $size == xl
+    @media (min-width: $xl)
+      @content

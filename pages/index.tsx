@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import { Grid, Unit } from '../components/Grid';
+import { Container, Navbar } from '../components/Layout';
 
 import MovieCard from '../components/MovieCard';
 
@@ -23,14 +24,10 @@ const movies = [
 const Home: NextPage = () => {
   return (
     <main>
-      <nav>
-        <ul>
-          <li>
-            MovieBox
-          </li>
-        </ul>
-      </nav>
-      <div>
+      <Navbar>
+        MovieBox
+      </Navbar>
+      <Container>
         <div>My Movies</div>
         <Grid>
           {movies.map(({ title, year, myRating }, index) => (
@@ -39,7 +36,7 @@ const Home: NextPage = () => {
             </Unit>
           ))}
         </Grid>
-      </div>
+      </Container>
     </main>
   )
 }

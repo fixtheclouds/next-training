@@ -1,0 +1,24 @@
+.container
+  text-rendering: optimizespeed
+  align-content: flex-start
+  display: flex
+  flex-flow: row wrap
+  margin:
+    left: -1rem
+    right: -1rem
+
+.unit
+  text-rendering: auto
+  display: inline-block
+  letter-spacing: normal
+  vertical-align: top
+  word-spacing: normal
+  padding:
+    left: 1rem
+    right: 1rem
+
+$base: 100 / 24
+
+@for $i from 1 through 24
+  .unit-#{$i}
+    width: #{$base * $i} + '%'

@@ -3,6 +3,7 @@ import { Grid, Unit } from '../components/Grid';
 import { Container, Navbar } from '../components/Layout';
 
 import MovieCard from '../components/MovieCard';
+import SectionHeading from '../components/SectionHeading/SectionHeading';
 
 // TODO: move data to somewhere else
 const movies = [
@@ -30,10 +31,10 @@ const Home: NextPage = () => {
     <div>
       <main>
         <Navbar>
-          MovieBox
+          <h1>MovieBox</h1>
         </Navbar>
         <Container>
-          <div>My Movies</div>
+          <SectionHeading>Trending movies</SectionHeading>
           <Grid>
             {movies.map(({ title, year, myRating }, index) => (
               <Unit key={index} size={6}>

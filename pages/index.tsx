@@ -1,8 +1,13 @@
 import type { NextPage } from 'next'
-import { Grid, Unit } from '../components/Grid'
-import { Container, Logo, Navbar } from '../components/Layout'
+import React from 'react'
 import { IoMdAperture } from 'react-icons/io'
 
+// TODO: Rewrite imports using index files
+import { Grid, Unit } from '../components/Grid'
+import { Container, Navbar } from '../components/layout'
+import Logo from '../components/Logo/Logo'
+import Menu from '../components/Menu/Menu'
+import MenuItem from '../components/Menu/MenuItem'
 import MovieCard from '../components/Movie/MovieCard/MovieCard'
 import SectionHeading from '../components/SectionHeading/SectionHeading'
 
@@ -36,7 +41,11 @@ const Home: NextPage = () => {
     <div>
       <main>
         <Navbar>
-          <Logo>MovieBox</Logo>
+          <Logo title="MovieBox"/>
+          <Menu>
+            <MenuItem link="#">Members</MenuItem>
+            <MenuItem link="#">Blog</MenuItem>
+          </Menu>
         </Navbar>
         <Container>
           <SectionHeading>Trending movies</SectionHeading>

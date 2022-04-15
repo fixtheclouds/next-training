@@ -1,5 +1,4 @@
 import Container from "./Container"
-import Navbar from "./Navbar"
-import Logo from "./Logo"
+import Navbar from "./Navbar/Navbar"
 
-export { Container, Navbar, Logo }
+export { Container, Navbar }

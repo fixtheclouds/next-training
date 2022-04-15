@@ -23,7 +23,7 @@ const MovieCard = ({ title, year, imageUrl }: IMovieCardProps) => {
         <div className={styles.likes}><IoMdHeart color={styles.heartColor}/>1,653</div>
       </div>
       <div className={styles.title}>
-        <a href="#">{title}</a>
+        {title}
       </div>
       <div className={styles.year}>{year}</div>
     </div>

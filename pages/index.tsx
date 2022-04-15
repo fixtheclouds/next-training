@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import React from 'react'
 import { IoMdAperture } from 'react-icons/io'
+import BlogArticle from '../components/Blog/BlogArticle/BlogArticle'
 
 // TODO: Rewrite imports using index files
 import { Grid, Unit } from '../components/Grid'
@@ -57,6 +58,23 @@ const Home: NextPage = () => {
             ))}
           </Grid>
           <SectionHeading>Blog</SectionHeading>
+          <Grid>
+            <Unit size={8}>
+              <BlogArticle authorName="John Doe" authorSlug="john" title="Breaking news" slug="breaking-news">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              </BlogArticle>
+            </Unit>
+            <Unit size={8}>
+              <BlogArticle authorName="John Doe" authorSlug="john" title="Breaking news" slug="breaking-news" imageUrl='https://i.imgur.com/7Xw8fEUm.jpg'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              </BlogArticle>
+            </Unit>
+            <Unit size={8}>
+              <BlogArticle authorName="John Doe" authorSlug="john" title="Breaking news" slug="breaking-news" imageUrl='https://i.imgur.com/7iKVNhOm.png'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              </BlogArticle>
+            </Unit>
+          </Grid>
           <h3>The text</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore

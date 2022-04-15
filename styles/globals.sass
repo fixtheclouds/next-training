@@ -3,6 +3,16 @@
 
 body
   font-family: 'Open Sans', sans-serif
-  color: $font-color
+  color: $secondary-color
   background-color: $bg-color
   letter-spacing: 0.075rem
+
+a
+  color: $font-color
+  text-decoration: none
+
+  &:hover
+    color: lighten($accent-color, 60%)
+
+h1, h2, h3, h4, h5, h6
+  color: $font-color

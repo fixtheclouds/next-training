@@ -2,27 +2,31 @@ import type { NextPage } from 'next'
 import { Grid, Unit } from '../components/Grid';
 import { Container, Navbar } from '../components/Layout';
 
-import MovieCard from '../components/MovieCard';
+import MovieCard from '../components/Movie/MovieCard/MovieCard';
 import SectionHeading from '../components/SectionHeading/SectionHeading';
 
 // TODO: move data to somewhere else
 const movies = [
   {
-    title: "Batman",
+    title: "Sicilian Romance",
     year: "2000",
-    myRating: 5
+    myRating: 5,
+    imageUrl: 'https://i.imgur.com/w4T834Dm.jpg'
   },
   {
-    title: "Snining",
-    year: "1980"
+    title: "The Darkest Knight",
+    year: "2010",
+    imageUrl: 'https://i.imgur.com/y2rbu4Im.jpg'
   },
   {
-    title: "The Rocker",
-    year: "2015"
+    title: "Spidey",
+    year: "2007",
+    imageUrl: 'https://i.imgur.com/L0TmZy4m.jpg'
   },
   {
-    title: "The Rocker",
-    year: "2015"
+    title: "The Killer Doll",
+    year: "2015",
+    imageUrl: 'https://i.imgur.com/5ZTMjUDm.jpg'
   }
 ]
 
@@ -36,12 +40,21 @@ const Home: NextPage = () => {
         <Container>
           <SectionHeading>Trending movies</SectionHeading>
           <Grid>
-            {movies.map(({ title, year, myRating }, index) => (
+            {movies.map(({ title, year, myRating, imageUrl }, index) => (
               <Unit key={index} size={6}>
-                <MovieCard title={title} year={year} myRating={myRating} />
+                <MovieCard title={title} year={year} myRating={myRating} imageUrl={imageUrl} />
               </Unit>
             ))}
           </Grid>
+          <SectionHeading>Blog</SectionHeading>
+          <h3>The text</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
         </Container>
       </main>
     </div>

@@ -18,26 +18,32 @@ const movies = [
   {
     title: "The Rocker",
     year: "2015"
+  },
+  {
+    title: "The Rocker",
+    year: "2015"
   }
 ]
 
 const Home: NextPage = () => {
   return (
-    <main>
-      <Navbar>
-        MovieBox
-      </Navbar>
-      <Container>
-        <div>My Movies</div>
-        <Grid>
-          {movies.map(({ title, year, myRating }, index) => (
-            <Unit key={index} size={6}>
-              <MovieCard title={title} year={year} myRating={myRating} />
-            </Unit>
-          ))}
-        </Grid>
-      </Container>
-    </main>
+    <div>
+      <main>
+        <Navbar>
+          MovieBox
+        </Navbar>
+        <Container>
+          <div>My Movies</div>
+          <Grid>
+            {movies.map(({ title, year, myRating }, index) => (
+              <Unit key={index} size={6}>
+                <MovieCard title={title} year={year} myRating={myRating} />
+              </Unit>
+            ))}
+          </Grid>
+        </Container>
+      </main>
+    </div>
   )
 }
 

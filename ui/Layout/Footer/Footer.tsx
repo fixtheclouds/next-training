@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../Container/Container'
+import Container from '../../Container/Container'
 import styles from './Footer.module.sass'
 
 interface IFooterProps {
@@ -8,11 +8,11 @@ interface IFooterProps {
 
 const Footer = ({ children }: IFooterProps) => {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <Container>
         {children}
       </Container>
-    </div>
+    </footer>
   )
 }
 

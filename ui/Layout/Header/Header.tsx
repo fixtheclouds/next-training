@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../Container/Container'
+import Container from '../../Container/Container'
 import styles from './Header.module.sass'
 
 interface INavbarProps {
@@ -8,13 +8,13 @@ interface INavbarProps {
 
 const Navbar = ({ children }: INavbarProps) => {
   return (
-    <div className={styles.navbar}>
+    <header className={styles.navbar}>
       <Container>
         <div className={styles.wrapper}>
           {children}
         </div>
       </Container>
-    </div>
+    </header>
   )
 }
 

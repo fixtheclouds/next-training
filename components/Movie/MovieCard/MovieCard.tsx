@@ -3,6 +3,7 @@ import Image from "next/image"
 import { IoMdEye, IoMdHeart } from "react-icons/io"
 
 import styles from "./MovieCard.module.sass"
+import ActiveLink from "../../ActiveLink"
 
 export interface IMovieCardProps {
   title: string
@@ -14,10 +15,10 @@ export interface IMovieCardProps {
 const MovieCard = ({ title, year, imageUrl }: IMovieCardProps) => {
   return (
     <div className={styles.card}>
-      <a href="#" className={styles.poster}>
+      <ActiveLink link={`/movies/${title}`} className={styles.poster}>
         <div className={styles.overlay}/>
         <Image alt="cover" width="200" height="300" layout="responsive" src={imageUrl} objectFit="cover" />
-      </a>
+      </ActiveLink>
       <div className={styles.stats}>
         <div className={styles.views}><IoMdEye color={styles.eyeColor}/>450</div>
         <div className={styles.likes}><IoMdHeart color={styles.heartColor}/>1,653</div>

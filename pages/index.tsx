@@ -9,6 +9,7 @@ import SectionHeading from '../ui/SectionHeading'
 import Logo from '../components/Logo'
 import MovieCard from '../components/Movie/MovieCard'
 import BlogArticle from '../components/Blog/BlogArticle/BlogArticle'
+import UserLink from '../components/User/UserLink'
 
 // TODO: move data to somewhere else
 const movies = [
@@ -40,10 +41,11 @@ const Home: NextPage = () => {
     <React.Fragment>
       <Header>
         <Logo title="MovieBox"/>
-        <Menu>
+        <Menu grow>
           <MenuItem link="#">Members</MenuItem>
           <MenuItem link="#">Blog</MenuItem>
         </Menu>
+        <UserLink name="Carlos Bent"/>
       </Header>
       <Content>
         <SectionHeading>Trending movies</SectionHeading>

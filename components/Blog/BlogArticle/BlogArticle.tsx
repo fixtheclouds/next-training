@@ -1,6 +1,7 @@
 import Image from "next/image"
 import React from "react"
 import { IoMdPerson } from "react-icons/io"
+import UserLink from "../../User/UserLink"
 import styles from "./BlogArticle.module.sass"
 
 interface IBlogArticleProps {
@@ -37,11 +38,10 @@ const BlogArticle = ({
       <div className={styles.content}>
         <div className={styles.author}>
           <a href={`/users/${authorSlug}`}>
-            <IoMdPerson className={styles.icon}/>
-            {authorName}
+            <UserLink name={authorName} small/>
           </a>
         </div>
-        <h3>{title}</h3>
+        <h3 className={styles.title}>{title}</h3>
         <p className={styles.excerpt}>
           {children}
         </p>

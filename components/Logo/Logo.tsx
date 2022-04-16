@@ -8,7 +8,10 @@ interface ILogoProps {
 
 const Logo = ({ title }: ILogoProps) => {
   return (
-    <h1><IoMdAperture className={styles.icon} color={styles.logoColor}/>{title}</h1>
+    <h1 className={styles.wrapper}>
+      <IoMdAperture className={styles.icon} color={styles.logoColor}/>
+      {title}
+    </h1>
   )
 }
 

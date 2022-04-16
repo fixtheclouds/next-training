@@ -4,9 +4,10 @@ import styles from "./Menu.module.sass"
 
 interface IMenuProps {
   children: React.ReactNode
+  grow?: boolean
 }
 
-const Menu = ({ children }: IMenuProps) => {
+const Menu = ({ children, grow = false }: IMenuProps) => {
   const childrenMapped = React.Children.map(children, child => {
     if (React.isValidElement(child)) {
       return (
@@ -16,7 +17,7 @@ const Menu = ({ children }: IMenuProps) => {
   })
 
   return (
-    <ul className={styles.ul}>
+    <ul className={`${styles.ul} ${grow && styles.ulGrow}`}>
       {childrenMapped}
     </ul>
   )

@@ -3,15 +3,12 @@ import React from 'react'
 import { IoMdAperture } from 'react-icons/io'
 import BlogArticle from '../components/Blog/BlogArticle/BlogArticle'
 
-// TODO: Rewrite imports using index files
-import { Grid, Unit } from '../components/Grid'
-import { Container, Header } from '../components/layout'
-import Footer from '../components/layout/Footer/Footer'
-import Logo from '../components/Logo/Logo'
-import Menu from '../components/Menu/Menu'
-import MenuItem from '../components/Menu/MenuItem'
-import MovieCard from '../components/Movie/MovieCard/MovieCard'
-import SectionHeading from '../components/SectionHeading/SectionHeading'
+import { Grid, Unit } from '../ui/Grid'
+import { Container, Header, Footer } from '../ui/Layout'
+import { Menu, MenuItem } from '../ui/Menu'
+import Logo from '../components/Logo'
+import MovieCard from '../components/Movie/MovieCard'
+import SectionHeading from '../ui/SectionHeading'
 
 // TODO: move data to somewhere else
 const movies = [

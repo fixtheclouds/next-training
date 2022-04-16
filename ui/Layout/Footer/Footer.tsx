@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../Container'
+import Container from '../Container/Container'
 import styles from './Footer.module.sass'
 
 interface IFooterProps {

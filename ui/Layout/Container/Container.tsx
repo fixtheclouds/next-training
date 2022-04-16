@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Layout.module.sass'
+import styles from './Container.module.sass'
 
 interface IContainerProps {
   children: React.ReactNode

@@ -58,17 +58,21 @@ const Home: NextPage = () => {
         <Grid>
           <Unit size={8}>
             <BlogArticle authorName="John Doe" authorSlug="john" title="Breaking news" slug="breaking-news">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              Pellentesque convallis id ante id tristique. Nulla porttitor tortor quis lorem rutrum condimentum.
+              Vestibulum quis metus aliquam, pharetra mi in, porta dolor.
+              Pellentesque elementum diam eget magna volutpat sodales.
             </BlogArticle>
           </Unit>
           <Unit size={8}>
             <BlogArticle authorName="John Doe" authorSlug="john" title="Breaking news" slug="breaking-news" imageUrl='https://i.imgur.com/7Xw8fEUm.jpg'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            In a metus a risus commodo scelerisque. Donec nisl nisl, lacinia sit amet ullamcorper id,
+            maximus quis eros. Sed lorem ex, convallis ac malesuada pellentesque, sagittis ac nunc.
             </BlogArticle>
           </Unit>
           <Unit size={8}>
             <BlogArticle authorName="John Doe" authorSlug="john" title="Breaking news" slug="breaking-news" imageUrl='https://i.imgur.com/7iKVNhOm.png'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              Integer leo orci, tempor a blandit at, ultrices a nunc. Phasellus mattis arcu sed ornare imperdiet.
+              In mattis nulla non nulla commodo bibendum ut sed ligula.
             </BlogArticle>
           </Unit>
         </Grid>

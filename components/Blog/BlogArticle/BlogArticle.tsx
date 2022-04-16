@@ -42,7 +42,7 @@ const BlogArticle = ({
           </a>
         </div>
         <h3>{title}</h3>
-        <p>
+        <p className={styles.excerpt}>
           {children}
         </p>
         <a href={`/articles/${slug}`} className={styles.readMore}>Read more</a>

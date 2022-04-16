@@ -11,30 +11,7 @@ import MovieCard from '../components/Movie/MovieCard'
 import BlogArticle from '../components/Blog/BlogArticle/BlogArticle'
 import UserLink from '../components/User/UserLink'
 
-// TODO: move data to somewhere else
-const movies = [
-  {
-    title: "The Darkest Knight",
-    year: "2010",
-    imageUrl: 'https://i.imgur.com/y2rbu4Im.jpg'
-  },
-  {
-    title: "Sicilian Romance",
-    year: "2000",
-    myRating: 5,
-    imageUrl: 'https://i.imgur.com/w4T834Dm.jpg'
-  },
-  {
-    title: "Spidey",
-    year: "2007",
-    imageUrl: 'https://i.imgur.com/L0TmZy4m.jpg'
-  },
-  {
-    title: "The Killer Doll",
-    year: "2015",
-    imageUrl: 'https://i.imgur.com/5ZTMjUDm.jpg'
-  }
-]
+import { movies } from './api/data.json'
 
 const Home: NextPage = () => {
   return (

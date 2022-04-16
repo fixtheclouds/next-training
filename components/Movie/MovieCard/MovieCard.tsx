@@ -15,7 +15,7 @@ export interface IMovieCardProps {
 const MovieCard = ({ title, year, imageUrl }: IMovieCardProps) => {
   return (
     <div className={styles.card}>
-      <ActiveLink link={`/movies/${title}`} className={styles.poster}>
+      <ActiveLink link={`/movies/${encodeURIComponent(title)}`} className={styles.poster}>
         <div className={styles.overlay}/>
         <Image alt="cover" width="200" height="300" layout="responsive" src={imageUrl} objectFit="cover" />
       </ActiveLink>

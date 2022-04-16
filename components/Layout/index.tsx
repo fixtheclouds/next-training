@@ -1,4 +1,4 @@
 import Container from "./Container"
-import Navbar from "./Navbar/Navbar"
+import Header from "./Header/Header"
 
-export { Container, Navbar }
+export { Container, Header }

@@ -5,7 +5,8 @@ import BlogArticle from '../components/Blog/BlogArticle/BlogArticle'
 
 // TODO: Rewrite imports using index files
 import { Grid, Unit } from '../components/Grid'
-import { Container, Navbar } from '../components/layout'
+import { Container, Header } from '../components/layout'
+import Footer from '../components/layout/Footer/Footer'
 import Logo from '../components/Logo/Logo'
 import Menu from '../components/Menu/Menu'
 import MenuItem from '../components/Menu/MenuItem'
@@ -41,13 +42,13 @@ const Home: NextPage = () => {
   return (
     <div>
       <main>
-        <Navbar>
+        <Header>
           <Logo title="MovieBox"/>
           <Menu>
             <MenuItem link="#">Members</MenuItem>
             <MenuItem link="#">Blog</MenuItem>
           </Menu>
-        </Navbar>
+        </Header>
         <Container>
           <SectionHeading>Trending movies</SectionHeading>
           <Grid>
@@ -84,6 +85,13 @@ const Home: NextPage = () => {
             officia deserunt mollit anim id est laborum.
           </p>
         </Container>
+        <Footer>
+          <p>
+            &copy; 2022
+            Designed & developed by&nbsp;
+            <a href="https://github.com/fixtheclouds" rel="noreferrer" target="_blank">FixTheClouds</a>
+          </p>
+        </Footer>
       </main>
     </div>
   )

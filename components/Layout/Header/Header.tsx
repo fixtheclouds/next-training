@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../Container'
-import styles from './Navbar.module.sass'
+import styles from './Header.module.sass'
 
 interface INavbarProps {
   children: React.ReactNode

@@ -17,8 +17,12 @@ const MenuItem = ({ link, children, route = false }: IMenuItemProps) => {
     activeRoute = router.pathname == link
   }
 
+  if (!link) {
+    return children
+  }
+
   return (
-    <ActiveLink className={`${styles.link} ${activeRoute && styles.active}`} link={link || '#'}>
+    <ActiveLink className={`${styles.link} ${activeRoute && styles.active}`} link={link}>
       {children}
     </ActiveLink>
   )

@@ -19,8 +19,8 @@ const Layout = ({ children }: ILayoutProps) => {
           <Logo title="MovieBox"/>
         </ActiveLink>
         <Menu grow>
-          <MenuItem link="#">Members</MenuItem>
-          <MenuItem link="#">Blog</MenuItem>
+          <MenuItem route link="#">Blog</MenuItem>
+          <MenuItem route link="/about">About</MenuItem>
         </Menu>
         <UserLink name="Carlos Bent"/>
       </Header>

@@ -8,14 +8,15 @@ import ActiveLink from "../../ActiveLink"
 export interface IMovieCardProps {
   title: string
   year: string
+  slug: string
   imageUrl: string
   myRating?: number
 }
 
-const MovieCard = ({ title, year, imageUrl }: IMovieCardProps) => {
+const MovieCard = ({ title, year, imageUrl, slug }: IMovieCardProps) => {
   return (
     <div className={styles.card}>
-      <ActiveLink link={`/movies/${encodeURIComponent(title)}`} className={styles.poster}>
+      <ActiveLink link={`/movies/${encodeURIComponent(slug)}`} className={styles.poster}>
         <div className={styles.overlay}/>
         <Image alt="cover" width="200" height="300" layout="responsive" src={imageUrl} objectFit="cover" />
       </ActiveLink>

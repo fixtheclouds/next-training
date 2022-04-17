@@ -2,18 +2,11 @@ import React from "react"
 import Image from "next/image"
 import { IoMdEye, IoMdHeart } from "react-icons/io"
 
-import styles from "./MovieCard.module.sass"
-import ActiveLink from "../../ActiveLink"
+import styles from "./Movie.module.sass"
+import ActiveLink from "../ActiveLink"
+import { IMovieProps } from "."
 
-export interface IMovieCardProps {
-  title: string
-  year: string
-  slug: string
-  imageUrl: string
-  myRating?: number
-}
-
-const MovieCard = ({ title, year, imageUrl, slug }: IMovieCardProps) => {
+const MovieCard = ({ title, year, imageUrl, slug }: IMovieProps) => {
   return (
     <div className={styles.card}>
       <ActiveLink link={`/movies/${encodeURIComponent(slug)}`} className={styles.poster}>

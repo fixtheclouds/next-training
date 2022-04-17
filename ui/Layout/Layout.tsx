@@ -1,4 +1,5 @@
 import React from "react"
+import ActiveLink from "../../components/ActiveLink"
 import Logo from "../../components/Logo"
 import UserLink from "../../components/User/UserLink"
 import { Menu, MenuItem } from "../Menu"
@@ -14,7 +15,9 @@ const Layout = ({ children }: ILayoutProps) => {
   return (
     <React.Fragment>
       <Header>
-        <Logo title="MovieBox"/>
+        <ActiveLink link="/">
+          <Logo title="MovieBox"/>
+        </ActiveLink>
         <Menu grow>
           <MenuItem link="#">Members</MenuItem>
           <MenuItem link="#">Blog</MenuItem>

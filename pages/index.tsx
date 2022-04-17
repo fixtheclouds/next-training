@@ -4,14 +4,18 @@ import React from 'react'
 import { Grid, Unit } from '../ui/Grid'
 import SectionHeading from '../ui/SectionHeading'
 
-import MovieCard from '../components/Movie/MovieCard'
+import { MovieCard } from '../components/Movie'
 import BlogArticle from '../components/Blog/BlogArticle/BlogArticle'
 
 import { movies } from './api/data.json'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
   return (
     <React.Fragment>
+      <Head>
+        <title>MovieBox</title>
+      </Head>
       <SectionHeading>Trending movies</SectionHeading>
       <Grid>
         {movies.map(({ title, year, myRating, imageUrl, slug }, index) => (

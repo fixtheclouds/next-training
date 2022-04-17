@@ -1,6 +1,14 @@
 @import "styles/variables"
 
 .card
+  .title
+    color: $font-color
+    padding: 0.5rem 0
+    text-align: center
+
+  .year
+    text-align: center
+    font-size: 0.875rem
 
 .poster
   display: block
@@ -12,13 +20,13 @@
     width: 1px
     style: solid
 
-  &:hover
-    cursor: pointer
-    border:
-      color: $accent-color
+a.poster:hover
+  cursor: pointer
+  border:
+    color: $accent-color
 
-    .overlay
-      background-color: rgba($accent-color, 0.4)
+  .overlay
+    background-color: rgba($accent-color, 0.4)
 
 .overlay
   width: 100%
@@ -26,14 +34,6 @@
   position: absolute
   z-index: 2
 
-.title
-  color: $font-color
-  padding: 0.5rem 0
-  text-align: center
-
-.year
-  text-align: center
-  font-size: 0.875rem
 
 .stats
   padding-top: 0.5rem
@@ -48,6 +48,11 @@
 
 .views
   margin-right: 0.5rem
+
+.info
+  .title
+    margin-bottom: 0.5rem
+  .year
 
 :export
   eyeColor: #116699

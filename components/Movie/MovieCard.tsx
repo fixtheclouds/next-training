@@ -6,7 +6,7 @@ import styles from "./Movie.module.sass"
 import ActiveLink from "../ActiveLink"
 import { IMovieProps } from "."
 
-const MovieCard = ({ title, year, imageUrl, slug }: IMovieProps) => {
+const MovieCard = ({ title, year, imageUrl, slug, likes, views }: IMovieProps) => {
   return (
     <div className={styles.card}>
       <ActiveLink link={`/movies/${encodeURIComponent(slug)}`} className={styles.poster}>
@@ -14,8 +14,14 @@ const MovieCard = ({ title, year, imageUrl, slug }: IMovieProps) => {
         <Image alt="cover" width="200" height="300" layout="responsive" src={imageUrl} objectFit="cover" />
       </ActiveLink>
       <div className={styles.stats}>
-        <div className={styles.views}><IoMdEye color={styles.eyeColor}/>450</div>
-        <div className={styles.likes}><IoMdHeart color={styles.heartColor}/>1,653</div>
+        <div className={styles.views}>
+          <IoMdEye color={styles.eyeColor}/>
+          {likes}
+        </div>
+        <div className={styles.likes}>
+          <IoMdHeart color={styles.heartColor}/>
+          {views}
+        </div>
       </div>
       <div className={styles.title}>
         {title}

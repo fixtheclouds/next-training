@@ -6,13 +6,11 @@ import styles from "./Movie.module.sass"
 import { IMovieProps } from "."
 import { Grid, Unit } from "../../ui/Grid"
 
-const MovieDetailed = ({ title, year, imageUrl, slug }: IMovieProps) => {
-  const initialViews = 45
-  const initialLikes = 60
-  const [viewsCount, setAsWatched] = useState(initialViews)
-  const [likesCount, like] = useState(60)
-  const isWatched = viewsCount > initialViews
-  const isLiked = likesCount > initialLikes
+const MovieDetailed = ({ title, year, imageUrl, likes, views }: IMovieProps) => {
+  const [viewsCount, setAsWatched] = useState(views)
+  const [likesCount, like] = useState(likes)
+  const isWatched = viewsCount > views
+  const isLiked = likesCount > likes
 
   const onEyeClick = () => {
     setAsWatched(isWatched ? viewsCount - 1 : viewsCount + 1)
@@ -50,8 +48,12 @@ const MovieDetailed = ({ title, year, imageUrl, slug }: IMovieProps) => {
             </p>
           </div>
           <div className={styles.actions}>
-            <IoMdEye color={isWatched ? styles.eyeColor : 'gray'} onClick={onEyeClick}/>{viewsCount}
-            <IoMdHeart color={isLiked ? styles.heartColor : 'gray'} onClick={onHeartClick}/>{likesCount}
+            <div className={styles.views}>
+              <IoMdEye color={isWatched ? styles.eyeColor : 'gray'} onClick={onEyeClick}/>{viewsCount}
+            </div>
+            <div className={styles.likes}>
+              <IoMdHeart color={isLiked ? styles.heartColor : 'gray'} onClick={onHeartClick}/>{likesCount}
+            </div>
           </div>
         </div>
       </Unit>

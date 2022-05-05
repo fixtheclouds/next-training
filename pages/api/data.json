@@ -4,26 +4,34 @@
       "title": "The Darkest Knight",
       "year": "2010",
       "slug": "the-darkest-knight",
-      "imageUrl": "https://i.imgur.com/y2rbu4Im.jpg"
+      "imageUrl": "https://i.imgur.com/y2rbu4Im.jpg",
+      "likes": 23,
+      "views": 120
     },
     {
       "title": "Sicilian Romance",
       "year": "2000",
       "slug": "sicilian-romance",
       "myRating": 5,
-      "imageUrl": "https://i.imgur.com/w4T834Dm.jpg"
+      "imageUrl": "https://i.imgur.com/w4T834Dm.jpg",
+      "likes": 4,
+      "views": 15
     },
     {
       "title": "Spidey",
       "year": "2007",
       "slug": "spidey",
-      "imageUrl": "https://i.imgur.com/L0TmZy4m.jpg"
+      "imageUrl": "https://i.imgur.com/L0TmZy4m.jpg",
+      "likes": 45,
+      "views": 200
     },
     {
       "title": "The Killer Doll",
       "year": "2015",
       "slug": "the-killer-doll",
-      "imageUrl": "https://i.imgur.com/5ZTMjUDm.jpg"
+      "imageUrl": "https://i.imgur.com/5ZTMjUDm.jpg",
+      "likes": 3,
+      "views": 18
     }
   ]
 }

@@ -6,6 +6,8 @@ export interface IMovieProps {
   year: string
   slug: string
   imageUrl: string
+  likes: number,
+  views: number,
   myRating?: number
 }
 

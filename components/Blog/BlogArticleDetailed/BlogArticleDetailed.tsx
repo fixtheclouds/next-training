@@ -2,7 +2,7 @@ import Image from "next/image"
 import React from "react"
 import { IoMdPerson } from "react-icons/io"
 import UserLink from "../../User/UserLink"
-import styles from "./BlogArticle.module.sass"
+import styles from "./BlogArticleDetailed.module.sass"
 
 interface IBlogArticleProps {
   imageUrl?: string
@@ -15,7 +15,7 @@ interface IBlogArticleProps {
 
 const defaultImageUrl = 'https://i.imgur.com/ZV7mxiL.jpg'
 
-const BlogArticle = ({
+const BlogArticleDetailed = ({
   title,
   slug,
   authorName,
@@ -51,4 +51,4 @@ const BlogArticle = ({
   )
 }
 
-export default BlogArticle
+export default BlogArticleDetailed
